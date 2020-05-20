@@ -4,7 +4,7 @@ exports.up = function (knex) {
     table.string("user").notNullable();
     table.string("password").notNullable();
     table.string("avatar");
-    table.array("wishlist");
+    table.string("wishlist");
   });
 };
 
