@@ -1,9 +1,8 @@
 const express = require("express");
+const ProductsController = require("./controllers/ProductsController");
 const routes = express.Router();
 
-routes.post("/user", (req, res) => {
-  const { user, password } = req.body;
-  console.log(user, password);
-});
+routes.get("/product", ProductsController.index);
+routes.post("/product", ProductsController.create);
 
 module.exports = routes;

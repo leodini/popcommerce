@@ -1,10 +1,9 @@
 exports.up = function (knex) {
   return knex.schema.createTable("user", function (table) {
-    table.string("id").primary();
+    table.string("userId").primary();
     table.string("user").notNullable();
     table.string("password").notNullable();
-    table.string("avatar");
-    table.string("wishlist");
+    table.foreign("wishes").references("productId").inTable("product");
   });
 };
 
