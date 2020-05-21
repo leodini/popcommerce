@@ -5,6 +5,7 @@ exports.up = function (knex) {
     table.string("decription").notNullable();
     table.integer("price").notNullable();
     table.string("url_img").notNullable();
+    table.integer("total_available");
     table.string("category");
     table.integer("discount");
   });
